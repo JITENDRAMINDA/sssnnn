@@ -54,10 +54,20 @@ def forawrd(client, message):
                                    client.send_sticker(int(u),'CAADBQADHQAD271NHQimFHP2bU9cAg')
                                    client.send_message(int(u),message.text.replace('🚾WICKET WICKET🚾' , '🚾** Wicket Wicket Wicket **🚾 '))
                                 else:
+                                 if not "ID" in message.text:
                                    client.send_message(int(u),message.text.replace('🎾' , '🥎'))
+                                 else:
+                                   if not "?" in message.text:
+                                    client.send_message(int(u),message.text.replace('🎾' , '🥎'))
+                                
+                               
  if "WON THE TOSS" in message.text:
-  client.send_message(int(u),message.text.replace('🎾' , '🥎'))
-
+    client.send_message(int(u),message.text.replace('🎾' , '🥎'))
+ if "RUNS SCORED:" in message.text:
+    client.send_message(int(u),message.text.replace('RUNS SCORED:' , '**RUNS SCORED:**'))
+  
+  
+  
 @app.on_message(Filters.chat(int(s)) & Filters.sticker)
 def forawrd(client, message):
     file = open("text.txt" , "r")
