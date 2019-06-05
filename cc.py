@@ -2,8 +2,8 @@ from pyrogram import Client, Filters
 app = Client('my_account',488556,"c722b7aadbf8b72109b2f96f30974c6d")
 
 
-u = '-1001356076506'
-s = '-1001369162545'
+u = '-1001226732297'
+s = '-1001262096355'
 @app.on_message(Filters.chat(int(s)) & Filters.text)
 def forawrd(client, message):
  if not "👇" in message.text:
