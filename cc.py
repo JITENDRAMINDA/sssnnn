@@ -55,7 +55,8 @@ def forawrd(client, message):
                                    client.send_message(int(u),message.text.replace('🚾WICKET WICKET🚾' , '🚾** Wicket Wicket Wicket **🚾 '))
                                 else:
                                    client.send_message(int(u),message.text.replace('🎾' , '🥎'))
-
+ if "WON THE TOSS" in message.text:
+  client.send_message(int(u),message.text.replace('🎾' , '🥎'))
 
 @app.on_message(Filters.chat(int(s)) & Filters.sticker)
 def forawrd(client, message):
