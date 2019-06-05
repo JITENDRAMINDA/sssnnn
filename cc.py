@@ -1,16 +1,18 @@
 from pyrogram import Client, Filters
-app = Client('my_account',814511,"44462f0f278503255d5cc30941b617a9")
+app = Client('my_account',488556,"c722b7aadbf8b72109b2f96f30974c6d")
 
 
 u = '-1001356076506'
-s = '-1001378725482'
+s = '-1001369162545'
 @app.on_message(Filters.chat(int(s)) & Filters.text)
 def forawrd(client, message):
-    print(message.text)
-    file = open("text.txt" , "r")
-    lines = file.readlines()
-    file.close()
-    for line in lines:
+ if not "👇" in message.text:
+  if len(message.text.split(' ')) < 8:
+   if not "👆" in message.text:
+     file = open("text.txt" , "r")
+     lines = file.readlines()
+     file.close()
+     for line in lines:
       if not line == 'closed':
         if '🖲' in message.text :
             client.send_message(int(u),message.text.replace('🖲' , '**💘'))
