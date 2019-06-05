@@ -1,1 +1,1 @@
-worker: python coin.py
+worker: python cc.py
