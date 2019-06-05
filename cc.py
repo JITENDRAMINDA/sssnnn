@@ -59,7 +59,115 @@ def forawrd(client, message):
                                  else:
                                    if not "?" in message.text:
                                     client.send_message(int(u),message.text.replace('🎾' , '🥎'))
-                                
+                                   else:
+                                    if not "id" in message.text:
+                                     client.send_message(int(u),message.text.replace('🎾' , '🥎'))
+                                    else:
+                                     if not "report" in message.text:
+                                      client.send_message(int(u),message.text.replace('🎾' , '🥎'))
+                                     else:
+                                      if not "Report" in message.text:
+                                       client.send_message(int(u),message.text.replace('🎾' , '🥎'))
+                                      else:
+                                       if not "REPORT" in message.text:
+                                        client.send_message(int(u),message.text.replace('🎾' , '🥎'))
+                                       else:
+                                        if not "fix" in message.text:
+                                         client.send_message(int(u),message.text.replace('🎾' , '🥎'))
+                                        else:
+                                         if not "FIX" in message.text:
+                                          client.send_message(int(u),message.text.replace('🎾' , '🥎'))
+                                         else:
+                                          if not "Fix" in message.text:
+                                           client.send_message(int(u),message.text.replace('🎾' , '🥎'))
+                                          else:
+                                           if not "LINK" in message.text:
+                                            client.send_message(int(u),message.text.replace('🎾' , '🥎'))
+                                           else:
+                                            if not "😡" in message.text:
+                                             client.send_message(int(u),message.text.replace('🎾' , '🥎'))
+                                            else:
+                                              if not "Id" in message.text:
+                                               client.send_message(int(u),message.text.replace('🎾' , '🥎'))
+                                              else:
+                                               if not "Link" in message.text:
+                                                client.send_message(int(u),message.text.replace('🎾' , '🥎'))
+                                               else:
+                                                if not "link" in message.text:
+                                                 client.send_message(int(u),message.text.replace('🎾' , '🥎'))
+                                                else:
+                                                 if not "https" in message.text:
+                                                  client.send_message(int(u),message.text.replace('🎾' , '🥎'))
+                                                 else:
+                                                  if not "CHASE" in message.text:
+                                                   client.send_message(int(u),message.text.replace('🎾' , '🥎'))
+                                                  else:
+                                                   if not "DEKHO" in message.text:
+                                                    client.send_message(int(u),message.text.replace('🎾' , '🥎'))
+                                                   else:
+                                                    if not "🖕" in message.text:
+                                                     client.send_message(int(u),message.text.replace('🎾' , '🥎'))
+                                                    else:
+                                                     if not "😳" in message.text:
+                                                      client.send_message(int(u),message.text.replace('🎾' , '🥎'))
+                                                     else:
+                                                      if not "😱" in message.text:
+                                                       client.send_message(int(u),message.text.replace('🎾' , '🥎'))
+                                                      else:
+                                                       if not "🥺" in message.text:
+                                                        client.send_message(int(u),message.text.replace('🎾' , '🥎'))
+                                                       else:
+                                                        if not "MARKET" in message.text:
+                                                          client.send_message(int(u),message.text.replace('🎾' , '🥎'))
+                                                        else:
+                                                         if not "TELEGRAM" in message.text:
+                                                           client.send_message(int(u),message.text.replace('🎾' , '🥎'))
+                                                         else:
+                                                          if not "PURE" in message.text:
+                                                           client.send_message(int(u),message.text.replace('🎾' , '🥎'))
+                                                          else:
+                                                           if not "ONLINE" in message.text:
+                                                            client.send_message(int(u),message.text.replace('🎾' , '🥎'))
+                                                           else:
+                                                            if not "BOOK" in message.text:
+                                                             client.send_message(int(u),message.text.replace('🎾' , '🥎'))
+                                                            else:
+                                                             if not "BOOKIE" in message.text:
+                                                              client.send_message(int(u),message.text.replace('🎾' , '🥎'))
+                                                             else:
+                                                              if not "FIXED" in message.text:
+                                                               client.send_message(int(u),message.text.replace('🎾' , '🥎'))
+                                                              else:
+                                                               if not "PASS" in message.text:
+                                                                client.send_message(int(u),message.text.replace('🎾' , '🥎'))
+                                                               else:
+                                                                if not "FIXER" in message.text:
+                                                                 client.send_message(int(u),message.text.replace('🎾' , '🥎'))
+                                                                else:
+                                                                 if not "FIX" in message.text:
+                                                                  client.send_message(int(u),message.text.replace('🎾' , '🥎'))
+                                                                 else:
+                                                                  if not "JALDI" in message.text:
+                                                                   client.send_message(int(u),message.text.replace('🎾' , '🥎'))
+                                                                  else:
+                                                                   if not "YA" in message.text:
+                                                                    client.send_message(int(u),message.text.replace('🎾' , '🥎'))
+                                                                   else:
+                                                                    if not "JOIN" in message.text:
+                                                                     client.send_message(int(u),message.text.replace('🎾' , '🥎'))
+                                                                    else:
+                                                                     if not "BATAO" in message.text:
+                                                                      client.send_message(int(u),message.text.replace('🎾' , '🥎'))
+                                                                     else:
+                                                                      if not "GHODA" in message.text:
+                                                                       client.send_message(int(u),message.text.replace('🎾' , '🥎'))
+                                                                      else:
+                                                                       if not "KYA" in message.text:
+                                                                        client.send_message(int(u),message.text.replace('🎾' , '🥎'))
+                                                                       else:
+                                                                        if not "LU" in message.text:
+                                                                          client.send_message(int(u),message.text.replace('🎾' , '🥎'))
+                               
                                
  if "WON THE TOSS" in message.text:
     client.send_message(int(u),message.text.replace('🎾' , '🥎'))
