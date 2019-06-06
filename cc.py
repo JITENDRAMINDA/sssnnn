@@ -1,181 +1,195 @@
-from pyrogram import Client, Filters
+from pyrogram import Client, Filters,Emoji
 app = Client('my_account',488556,"c722b7aadbf8b72109b2f96f30974c6d")
 
 
-u = '-1001163982951'
+
+u = '-1001356076506'
+
 s = '-1001369162545'
-@app.on_message(Filters.chat(int(s)) & Filters.text & ~ Filters.edited )
+
+@app.on_message(Filters.chat(int(s)) & Filters.text & ~ Filters.edited)
 def forawrd(client, message):
- if not "👇" in message.text:
-  if len(message.text.split(' ')) < 8:
-   if not "👆" in message.text:
-     file = open("text.txt" , "r")
-     lines = file.readlines()
-     file.close()
-     for line in lines:
+    file = open("text.txt" , "r")
+    lines = file.readlines()
+    file.close()
+    for line in lines:
       if not line == 'closed':
-        if '🖲' in message.text :
+        if '🖲' in message.text:
             client.send_message(int(u),message.text.replace('🖲' , '**💘'))
-        else:
-          if '📟' in message.text :
+        elif '📟' in message.text :
             client.send_message(int(u),message.text.replace('📟' , '🏝'))
-          else:
-            if message.text == '6' :
-               client.send_sticker(int(u),'CAADBQADHAAD271NHXPgZgboyWwDAg')
-               client.send_message(int(u),'**Six**')
-            else:
-              if message.text == '4' :
-               client.send_sticker(int(u),'CAADBQADGwAD271NHWpGz0fJOgEPAg')
-               client.send_message(int(u),'**Four**')
-              else:
-                if message.text == 'WD' :
-                  client.send_sticker(int(u),'CAADBQADHgAD271NHUFx5PgLyzp9Ag')
-                  client.send_message(int(u),message.text.replace('WD' , '🤦‍♂️ **WIDE BALL** 🤦‍♂️'))
-                else:
-                    if message.text == 'WKT' :
-                     client.send_sticker(int(u),'CAADBQADHQAD271NHQimFHP2bU9cAg')
-                     client.send_message(int(u),message.text.replace('WKT' , '🚾** Wicket Wicket Wicket** 🚾 ')) 
-                    else:
-                       if 'NO BALL' in message.text:
-                         client.send_message(int(u),message.text.replace('NO BALL' , '🔛** NO BALL **🔛') )
-                       else:
-                          if 'DRINKS BREAK' in message.text:
-                            client.send_sticker(int(u),'CAADBQADJQAD271NHRSHuFn7xmbvAg')
-                            client.send_message(int(u), '🍻** DRINKS BREAK **🍻') 
-                          else:
-                            if 'DEAD BALL' in message.text:
-                               client.send_sticker(int(u),'CAADBQADIQAD271NHd6xC7TBgAsmAg')
-                               client.send_message(int(u), '🔁** DEAD BALL **🔄') 
-                            else:
-                              if message.text == 'RUKA':
-                                 client.send_message(int(u), '🛑** BOWLER RUKA **🛑')
-                              else:
-                                if message.text == '🚾WICKET WICKET🚾':
-                                   client.send_sticker(int(u),'CAADBQADHQAD271NHQimFHP2bU9cAg')
-                                   client.send_message(int(u),message.text.replace('🚾WICKET WICKET🚾' , '🚾** Wicket Wicket Wicket **🚾 '))
-                                else:
-                                 if not "ID" in message.text:
-                                   client.send_message(int(u),message.text.replace('🎾' , '🥎'))
-                                 else:
-                                   if not "?" in message.text:
-                                    client.send_message(int(u),message.text.replace('🎾' , '🥎'))
-                                   else:
-                                    if not "id" in message.text:
-                                     client.send_message(int(u),message.text.replace('🎾' , '🥎'))
-                                    else:
-                                     if not "report" in message.text:
-                                      client.send_message(int(u),message.text.replace('🎾' , '🥎'))
-                                     else:
-                                      if not "Report" in message.text:
-                                       client.send_message(int(u),message.text.replace('🎾' , '🥎'))
-                                      else:
-                                       if not "REPORT" in message.text:
-                                        client.send_message(int(u),message.text.replace('🎾' , '🥎'))
-                                       else:
-                                        if not "fix" in message.text:
-                                         client.send_message(int(u),message.text.replace('🎾' , '🥎'))
-                                        else:
-                                         if not "FIX" in message.text:
-                                          client.send_message(int(u),message.text.replace('🎾' , '🥎'))
-                                         else:
-                                          if not "Fix" in message.text:
-                                           client.send_message(int(u),message.text.replace('🎾' , '🥎'))
-                                          else:
-                                           if not "LINK" in message.text:
-                                            client.send_message(int(u),message.text.replace('🎾' , '🥎'))
-                                           else:
-                                            if not "😡" in message.text:
-                                             client.send_message(int(u),message.text.replace('🎾' , '🥎'))
-                                            else:
-                                              if not "Id" in message.text:
-                                               client.send_message(int(u),message.text.replace('🎾' , '🥎'))
-                                              else:
-                                               if not "Link" in message.text:
-                                                client.send_message(int(u),message.text.replace('🎾' , '🥎'))
-                                               else:
-                                                if not "link" in message.text:
-                                                 client.send_message(int(u),message.text.replace('🎾' , '🥎'))
-                                                else:
-                                                 if not "https" in message.text:
-                                                  client.send_message(int(u),message.text.replace('🎾' , '🥎'))
-                                                 else:
-                                                  if not "CHASE" in message.text:
-                                                   client.send_message(int(u),message.text.replace('🎾' , '🥎'))
-                                                  else:
-                                                   if not "DEKHO" in message.text:
-                                                    client.send_message(int(u),message.text.replace('🎾' , '🥎'))
-                                                   else:
-                                                    if not "🖕" in message.text:
-                                                     client.send_message(int(u),message.text.replace('🎾' , '🥎'))
-                                                    else:
-                                                     if not "😳" in message.text:
-                                                      client.send_message(int(u),message.text.replace('🎾' , '🥎'))
-                                                     else:
-                                                      if not "😱" in message.text:
-                                                       client.send_message(int(u),message.text.replace('🎾' , '🥎'))
-                                                      else:
-                                                       if not "🥺" in message.text:
-                                                        client.send_message(int(u),message.text.replace('🎾' , '🥎'))
-                                                       else:
-                                                        if not "MARKET" in message.text:
-                                                          client.send_message(int(u),message.text.replace('🎾' , '🥎'))
-                                                        else:
-                                                         if not "TELEGRAM" in message.text:
-                                                           client.send_message(int(u),message.text.replace('🎾' , '🥎'))
-                                                         else:
-                                                          if not "PURE" in message.text:
-                                                           client.send_message(int(u),message.text.replace('🎾' , '🥎'))
-                                                          else:
-                                                           if not "ONLINE" in message.text:
-                                                            client.send_message(int(u),message.text.replace('🎾' , '🥎'))
-                                                           else:
-                                                            if not "BOOK" in message.text:
-                                                             client.send_message(int(u),message.text.replace('🎾' , '🥎'))
-                                                            else:
-                                                             if not "BOOKIE" in message.text:
-                                                              client.send_message(int(u),message.text.replace('🎾' , '🥎'))
-                                                             else:
-                                                              if not "FIXED" in message.text:
-                                                               client.send_message(int(u),message.text.replace('🎾' , '🥎'))
-                                                              else:
-                                                               if not "PASS" in message.text:
-                                                                client.send_message(int(u),message.text.replace('🎾' , '🥎'))
-                                                               else:
-                                                                if not "FIXER" in message.text:
-                                                                 client.send_message(int(u),message.text.replace('🎾' , '🥎'))
-                                                                else:
-                                                                 if not "FIX" in message.text:
-                                                                  client.send_message(int(u),message.text.replace('🎾' , '🥎'))
-                                                                 else:
-                                                                  if not "JALDI" in message.text:
-                                                                   client.send_message(int(u),message.text.replace('🎾' , '🥎'))
-                                                                  else:
-                                                                   if not "YA" in message.text:
-                                                                    client.send_message(int(u),message.text.replace('🎾' , '🥎'))
-                                                                   else:
-                                                                    if not "JOIN" in message.text:
-                                                                     client.send_message(int(u),message.text.replace('🎾' , '🥎'))
-                                                                    else:
-                                                                     if not "BATAO" in message.text:
-                                                                      client.send_message(int(u),message.text.replace('🎾' , '🥎'))
-                                                                     else:
-                                                                      if not "GHODA" in message.text:
-                                                                       client.send_message(int(u),message.text.replace('🎾' , '🥎'))
-                                                                      else:
-                                                                       if not "KYA" in message.text:
-                                                                        client.send_message(int(u),message.text.replace('🎾' , '🥎'))
-                                                                       else:
-                                                                        if not "LU" in message.text:
-                                                                          client.send_message(int(u),message.text.replace('🎾' , '🥎'))
-                               
-                               
- if "WON THE TOSS" in message.text:
-    client.send_message(int(u),message.text.replace('🎾' , '🥎'))
- if "RUNS SCORED:" in message.text:
-    client.send_message(int(u),message.text.replace('RUNS SCORED:' , '**RUNS SCORED:**'))
-  
-  
-  
+        elif message.text == '6':
+            client.send_sticker(int(u),'CAADBQADHAAD271NHXPgZgboyWwDAg')
+            client.send_message(int(u),'**Six**')
+        elif message.text == '4' :
+            client.send_sticker(int(u),'CAADBQADGwAD271NHWpGz0fJOgEPAg')
+            client.send_message(int(u),'**Four**')
+        elif message.text == 'WD' :
+            client.send_sticker(int(u),'CAADBQADHgAD271NHUFx5PgLyzp9Ag')
+            client.send_message(int(u),message.text.replace('WD' , '🤦‍♂️ **WIDE BALL** 🤦‍♂️'))
+        elif message.text == 'WKT' :
+            client.send_sticker(int(u),'CAADBQADHQAD271NHQimFHP2bU9cAg')
+            client.send_message(int(u),message.text.replace('WKT' , '🚾** Wicket Wicket Wicket** 🚾 ')) 
+        elif 'NO BALL' in message.text:
+            client.send_message(int(u),message.text.replace('NO BALL' , '🔛** NO BALL **🔛') )
+        elif 'DRINKS BREAK' in message.text:
+            client.send_sticker(int(u),'CAADBQADJQAD271NHRSHuFn7xmbvAg')
+            client.send_message(int(u), '🍻** DRINKS BREAK **🍻') 
+        elif 'DEAD BALL' in message.text:
+            client.send_sticker(int(u),'CAADBQADIQAD271NHd6xC7TBgAsmAg')
+            client.send_message(int(u), '🔁** DEAD BALL **🔄') 
+        elif message.text == 'RUKA':
+            client.send_message(int(u), '🛑** BOWLER RUKA **🛑')
+        elif message.text == '🚾WICKET WICKET🚾':
+            client.send_sticker(int(u),'CAADBQADHQAD271NHQimFHP2bU9cAg')
+            client.send_message(int(u),message.text.replace('🚾WICKET WICKET🚾' , '🚾** Wicket Wicket Wicket **🚾'))
+        elif "bullet".casefold() in message.text.casefold():
+          print(".")
+        elif "who".casefold() in message.text.casefold():
+          print(".")
+        elif "bahanchod".casefold() in message.text.casefold():
+          print(".")
+        elif "lund".casefold() in message.text.casefold():
+          print(".")
+        elif "mkc".casefold() in message.text.casefold():
+          print(".")
+        elif "loude".casefold() in message.text.casefold():
+          print(".")
+        elif "member".casefold() in message.text.casefold():
+          print(".")
+        elif "🖕".casefold() in message.text.casefold():
+          print(".")
+        elif "chut".casefold() in message.text.casefold():
+          print(".")
+        elif "gand".casefold() in message.text.casefold():
+          print(".")
+        elif "maa".casefold() in message.text.casefold():
+          print(".")
+        elif "bhosdi".casefold() in message.text.casefold():
+          print(".")
+        elif "chutiya".casefold() in message.text.casefold():
+          print(".")
+        elif "madarchod".casefold() in message.text.casefold():
+          print(".")
+        elif "kya".casefold() in message.text.casefold():
+          print(".")
+        elif "🤟".casefold() in message.text.casefold():
+          print(".")
+        elif "☝️".casefold() in message.text.casefold():
+          print(".")
+        elif "😜".casefold() in message.text.casefold():
+          print(".")
+        elif "😎".casefold() in message.text.casefold():
+          print(".")
+        elif "😂".casefold() in message.text.casefold():
+          print(".")
+        elif "😂".casefold() in message.text.casefold():
+          print(".")
+        elif "😋".casefold() in message.text.casefold():
+          print(".")
+        elif "🥺".casefold() in message.text.casefold():
+          print(".")
+        elif "members".casefold() in message.text.casefold():
+          print(".")
+        elif "only".casefold() in message.text.casefold():
+          print(".")
+        elif "chut".casefold() in message.text.casefold():
+          print(".")
+        elif "karvana".casefold() in message.text.casefold():
+          print(".")
+        elif "link".casefold() in message.text.casefold():
+          print(".")
+        elif "loss".casefold() in message.text.casefold():
+          print(".")
+        elif "audio".casefold() in message.text.casefold():
+          print(".")
+        elif "varna".casefold() in message.text.casefold():
+          print(".")
+        elif "pura".casefold() in message.text.casefold():
+          print(".")
+        elif "puri".casefold() in message.text.casefold():
+          print(".")
+        elif "open".casefold() in message.text.casefold():
+          print(".")
+        elif "paid".casefold() in message.text.casefold():
+          print(".")
+        elif "contact".casefold() in message.text.casefold():
+          print(".")
+        elif "baazigar".casefold() in message.text.casefold():
+          print(".")
+        elif "market".casefold() in message.text.casefold():
+          print(".")
+        elif "load".casefold() in message.text.casefold():
+          print(".")
+        elif "whatsapp".casefold() in message.text.casefold():
+          print(".")
+        elif "timepass".casefold() in message.text.casefold():
+          print(".")
+        elif "kamma".casefold() in message.text.casefold():
+          print(".")
+        elif "book".casefold() in message.text.casefold():
+          print(".")
+        elif "teenpatti".casefold() in message.text.casefold():
+          print(".")
+        elif "diya".casefold() in message.text.casefold():
+          print(".")
+        elif "bhai".casefold() in message.text.casefold():
+          print(".")
+        elif "😀".casefold() in message.text.casefold():
+          print(".")
+        elif "😑".casefold() in message.text.casefold():
+          print(".")
+        elif "😐".casefold() in message.text.casefold():
+          print(".")
+        elif "ID".casefold() in message.text.casefold():
+          print(".")
+        elif "dekho".casefold() in message.text.casefold():
+          print(".")
+        elif "fix".casefold() in message.text.casefold():
+          print(".")
+        elif "😱".casefold() in message.text.casefold():
+          print(".")
+        elif "😳".casefold() in message.text.casefold():
+          print(".")
+        elif "fixer".casefold() in message.text.casefold():
+          print(".")
+        elif "👆".casefold() in message.text.casefold():
+          print(".")
+        elif "👇".casefold() in message.text.casefold():
+          print(".")
+        elif "match".casefold() in message.text.casefold():
+          print(".")
+        elif "pass".casefold() in message.text.casefold():
+          print(".")
+        elif "sab".casefold() in message.text.casefold():
+          print(".")
+        elif "chase".casefold() in message.text.casefold():
+          print(".")
+        elif "id".casefold() in message.text.casefold():
+          print(".")
+        elif "kama".casefold() in message.text.casefold():
+          print(".")
+        elif "lu".casefold() in message.text.casefold():
+          print(".")
+        elif "script".casefold() in message.text.casefold():
+          print(".")
+        elif "paise".casefold() in message.text.casefold():
+          print(".")
+        elif "UDEGA".casefold() in message.text.casefold():
+          print(".")
+        elif "dam".casefold() in message.text.casefold():
+          print(".")
+        elif "😒".casefold() in message.text.casefold():
+          print(".")
+        elif "LOOT".casefold() in message.text.casefold():
+          print(".")
+        elif "HTTPS".casefold() in message.text.casefold():
+          print(".")
+        else:
+            client.send_message(int(u),message.text.replace('🎾' , '🥎'))
+            print(message.text)
+
+
 @app.on_message(Filters.chat(int(s)) & Filters.sticker)
 def forawrd(client, message):
     file = open("text.txt" , "r")
@@ -183,7 +197,7 @@ def forawrd(client, message):
     file.close()
     for line in lines:
       if not line == 'closed':
-        if message.sticker.file_id == 'CAADBQADFAQAAlrCoBKRHyVMca5GGQI' :
+        if message.sticker.file_id == 'CAADBQADkgIAAlTquhpPMfzjWNqQagI' :
             client.send_sticker(int(u),'CAADBQADHwAD271NHQtXw-moeKYWAg')
             client.send_message(int(u),'🍾 **INNINIGS BREAK** 🍾' )
 
