@@ -3,9 +3,9 @@ app = Client('my_account',728044,"a41ddadc9696482aff94a4b37221574a")
 
 
 
-u = '-1001163982951'
+u = '-1001378725482'
 
-s = '-1001369162545'
+s = '-1001262096355'
 
 @app.on_message(Filters.chat(int(s)) & Filters.text & ~ Filters.edited)
 def forawrd(client, message):
