@@ -28,12 +28,12 @@ def forward(client, message):
             client.send_message(int(u),'**Four**')
         elif message.text.casefold() == 'WD'.casefold() :
             client.send_sticker(int(u),'CAADBQADHgAD271NHUFx5PgLyzp9Ag')
-            client.send_message(int(u),message.text.replace('WD'.casefold() , '🤦‍♂️ **WIDE BALL** 🤦‍♂️'))
+            client.send_message(int(u),'🤦‍♂️ **WIDE BALL** 🤦‍♂️')
         elif message.text.casefold() == 'WKT'.casefold() :
             client.send_sticker(int(u),'CAADBQADHQAD271NHQimFHP2bU9cAg')
-            client.send_message(int(u),message.text.replace('WKT'.casefold() , '🚾** Wicket Wicket Wicket** 🚾 ')) 
+            client.send_message(int(u),'🚾** Wicket Wicket Wicket** 🚾 ') 
         elif 'NO BALL'.casefold() in message.text.casefold():
-            client.send_message(int(u),message.text.replace('NO BALL'.casefold() , '🔛** NO BALL **🔛') )
+            client.send_message(int(u),'🔛** NO BALL **🔛' )
         elif 'DRINKS BREAK'.casefold() in message.text.casefold():
             client.send_sticker(int(u),'CAADBQADJQAD271NHRSHuFn7xmbvAg')
             client.send_message(int(u), '🍻** DRINKS BREAK **🍻') 
@@ -44,7 +44,7 @@ def forward(client, message):
             client.send_message(int(u), '🛑** BOWLER RUKA **🛑')
         elif message.text.casefold() == '🚾WICKET WICKET🚾'.casefold():
             client.send_sticker(int(u),'CAADBQADHQAD271NHQimFHP2bU9cAg')
-            client.send_message(int(u),message.text.replace('🚾WICKET WICKET🚾' , '🚾** Wicket Wicket Wicket **🚾'))
+            client.send_message(int(u),'🚾** Wicket Wicket Wicket **🚾')
         else:
             client.send_message(int(u),message.text.replace('🎾' , '🥎'))
 
