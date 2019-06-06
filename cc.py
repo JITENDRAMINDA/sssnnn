@@ -53,7 +53,13 @@ def forawrd(client, message):
   if message.sticker.file_id == 'CAADBQADkgIAAlTquhpPMfzjWNqQagI' :
     client.send_sticker(int(u),'CAADBQADHwAD271NHQtXw-moeKYWAg')
     client.send_message(int(u),'🍾 **INNINIGS BREAK** 🍾' )
-
+    
+@app.on_message(Filters.chat(int(s)) & Filters.edited & Filters.text)
+def edit(client, message):
+    mess = client.iter_history(int(s), limit=30)
+    for i in mess:
+        if i.text.split(' ')[0:4] in message.text:
+            i.edit(message.text)
 
 app.run()
 
