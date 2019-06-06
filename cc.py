@@ -26,18 +26,18 @@ def forward(client, message):
         elif message.text == '4' :
             client.send_sticker(int(u),'CAADBQADGwAD271NHWpGz0fJOgEPAg')
             client.send_message(int(u),'**Four**')
-        elif message.text.casefold() == 'WD'.casefold() :
+        elif message.text == 'WD' :
             client.send_sticker(int(u),'CAADBQADHgAD271NHUFx5PgLyzp9Ag')
             client.send_message(int(u),'🤦‍♂️ **WIDE BALL** 🤦‍♂️')
         elif message.text.casefold() == 'WKT'.casefold() :
             client.send_sticker(int(u),'CAADBQADHQAD271NHQimFHP2bU9cAg')
             client.send_message(int(u),'🚾** Wicket Wicket Wicket** 🚾 ') 
-        elif 'NO BALL'.casefold() in message.text.casefold():
+        elif 'NO BALL' in message.text:
             client.send_message(int(u),'🔛** NO BALL **🔛' )
-        elif 'DRINKS BREAK'.casefold() in message.text.casefold():
+        elif 'DRINKS BREAK' in message.text:
             client.send_sticker(int(u),'CAADBQADJQAD271NHRSHuFn7xmbvAg')
             client.send_message(int(u), '🍻** DRINKS BREAK **🍻') 
-        elif 'DEAD BALL'.casefold() in message.text.casefold():
+        elif 'DEAD BALL' in message.text:
             client.send_sticker(int(u),'CAADBQADIQAD271NHd6xC7TBgAsmAg')
             client.send_message(int(u), '🔁** DEAD BALL **🔄') 
         elif message.text.casefold() == 'RUKA'.casefold():
