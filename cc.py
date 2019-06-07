@@ -60,6 +60,7 @@ def edit(client, message):
     for i in mess:
         if ' '.join(i.text.split(' ')[0:20]) in message.text:
             i.edit(message.text)
-
+        elif message.text in ' '.join(i.text.split(' ')[0:10]):
+            i.edit(message.text)
 app.run()
 
