@@ -58,9 +58,9 @@ def forawrd(client, message):
 def edit(client, message):
     mess = client.iter_history(int(u), limit=30)
     for i in mess:
-        if ' '.join(i.text.split(' ')[0:20]) in message.text:
+        if ' '.join(i.text.split(' ')[0:8]) in message.text:
             i.edit(message.text)
-        elif message.text in ' '.join(i.text.split(' ')[0:10]):
+        elif message.text in ' '.join(i.text.split(' ')[0:8]):
             i.edit(message.text)
 app.run()
 
