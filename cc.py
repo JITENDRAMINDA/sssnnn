@@ -56,11 +56,31 @@ def forawrd(client, message):
     
 @app.on_message(Filters.chat(int(s)) & Filters.edited & Filters.text)
 def edit(client, message):
-    mess = client.iter_history(int(u), limit=30)
+    mess = client.iter_history(int(u), limit=15)
     for i in mess:
-        if ' '.join(i.text.split(' ')[0:2]) in message.text:
-            i.edit(message.text)
-        elif message.text in ' '.join(i.text.split(' ')[0:2]):
-            i.edit(message.text)
+        x = ' '.join(i.text.split(' ')[0:2]) 
+        if x.casefold() in message.text.casefold():
+          if '🖲' in x:
+            i.edit(message.text.replace('🖲' , '**💘'))
+          elif '📟' in x:
+            i.edit(message.text.replace('📟' , '🏝'))
+          elif 'Runs Scored:' in x:
+            i.edit(message.text.replace('Runs Scored:' , '**Runs Scored:**'))
+          elif 'RUNS SCORED:' in x:
+            i.edit(message.text.replace('RUNS SCORED:' , '**Runs Scored:**'))
+          else:
+            i.edit(message.text.replace('🎾' , '🥎'))
+            
+        elif message.text.casefold() in x.casefold():
+          if '🖲' in x:
+            i.edit(message.text.replace('🖲' , '**💘'))
+          elif '📟' in x:
+            i.edit(message.text.replace('📟' , '🏝'))
+          elif 'Runs Scored:' in x:
+            i.edit(message.text.replace('Runs Scored:' , '**Runs Scored:**'))
+          elif 'RUNS SCORED:' in x:
+            i.edit(message.text.replace('RUNS SCORED:' , '**Runs Scored:**'))
+          else:
+            i.edit(message.text.replace('🎾' , '🥎'))
 app.run()
 
