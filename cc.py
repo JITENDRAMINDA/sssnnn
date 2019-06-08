@@ -59,28 +59,37 @@ def edit(client, message):
     mess = client.iter_history(int(u), limit=15)
     for i in mess:
         x = ' '.join(i.text.split(' ')[0:2]) 
-        if x.casefold() in message.text.casefold():
-          if '🖲' in x:
+        y = ' '.join(message.text.split(' ')[0:2])
+        z = ' '.join(i.text.split(' ')[0:20]) 
+
+        if x.casefold() in y.casefold():
+          if '🖲' in z:
             i.edit(message.text.replace('🖲' , '**💘'))
-          elif '📟' in x:
+          if '📟' in z:
             i.edit(message.text.replace('📟' , '🏝'))
-          elif 'Runs Scored:' in x:
+          if 'Runs Scored:' in z:
             i.edit(message.text.replace('Runs Scored:' , '**Runs Scored:**'))
-          elif 'RUNS SCORED:' in x:
+          if 'RUNS SCORED:' in z:
             i.edit(message.text.replace('RUNS SCORED:' , '**Runs Scored:**'))
-          else:
+          if '🎾' in z:
             i.edit(message.text.replace('🎾' , '🥎'))
+          else:
+            i.edit(message.text)
+          
             
-        elif message.text.casefold() in x.casefold():
-          if '🖲' in x:
+        elif y.casefold() in x.casefold():
+          if '🖲' in z:
             i.edit(message.text.replace('🖲' , '**💘'))
-          elif '📟' in x:
+          if '📟' in z:
             i.edit(message.text.replace('📟' , '🏝'))
-          elif 'Runs Scored:' in x:
+          if 'Runs Scored:' in z:
             i.edit(message.text.replace('Runs Scored:' , '**Runs Scored:**'))
-          elif 'RUNS SCORED:' in x:
+          if 'RUNS SCORED:' in z:
             i.edit(message.text.replace('RUNS SCORED:' , '**Runs Scored:**'))
-          else:
+          if '🎾' in z:
             i.edit(message.text.replace('🎾' , '🥎'))
+          else:
+            i.edit(message.text)
+        
 app.run()
 
