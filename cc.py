@@ -56,7 +56,7 @@ def forawrd(client, message):
     
 @app.on_message(Filters.chat(int(s)) & Filters.edited & Filters.text)
 def edit(client, message):
-    mess = client.iter_history(int(u), limit=15)
+    mess = client.iter_history(int(u), limit=12)
     for i in mess:
         x = ' '.join(i.text.split(' ')[0:2]) 
         y = ' '.join(message.text.split(' ')[0:2])
