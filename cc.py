@@ -56,39 +56,53 @@ def forawrd(client, message):
     
 @app.on_message(Filters.chat(int(s)) & Filters.edited & Filters.text)
 def edit(client, message):
-    mess = client.iter_history(int(u), limit=12)
+    mess = client.iter_history(int(u), limit=15)
     for i in mess:
         x = ' '.join(i.text.split(' ')[0:2]) 
         y = ' '.join(message.text.split(' ')[0:2])
-        z = ' '.join(i.text.split(' ')[0:20]) 
 
         if x.casefold() in y.casefold():
-          if '🖲' in z:
+          text = message.text
+          f = False
+          words = ['lund','dekho','fix','fixer','👆','👇','sab','karvana','link','loss','audio','varna','pura','puri','open','paid','contact','baazigar','whatsapp','timepass','kamma','book','teenpatti','diya','bhai','🥺','members','🖕','member','only','chut','lund','gand','ma','maa','bhosdi','bahan','loude','lode','lavde','chutiya','🤞','🤟','☝️','mkc','bkc','mc','bc','madarchod','bahanchod','bahnchod','gandu','❓','kya','wbt','line','who',"https://",'joinchat','bullet','fuck','🤔']
+          for word in words:
+            if word.casefold() in text.casefold():
+              f = True
+          if not f:       
+           if '🖲' in text:
             i.edit(message.text.replace('🖲' , '**💘'))
-          if '📟' in z:
+           elif '📟' in text:
             i.edit(message.text.replace('📟' , '🏝'))
-          if 'Runs Scored:' in z:
+           elif 'Runs Scored:' in text:
             i.edit(message.text.replace('Runs Scored:' , '**Runs Scored:**'))
-          if 'RUNS SCORED:' in z:
+           elif 'RUNS SCORED:' in text:
             i.edit(message.text.replace('RUNS SCORED:' , '**Runs Scored:**'))
-          if '🎾' in z:
+           elif '🎾' in text:
             i.edit(message.text.replace('🎾' , '🥎'))
-          else:
+           else:
             i.edit(message.text)
-          
-            
+
+
+
         elif y.casefold() in x.casefold():
-          if '🖲' in z:
+          text = message.text
+          f = False
+          words = ['lund','dekho','fix','fixer','👆','👇','sab','karvana','link','loss','audio','varna','pura','puri','open','paid','contact','baazigar','whatsapp','timepass','kamma','book','teenpatti','diya','bhai','🥺','members','🖕','member','only','chut','lund','gand','ma','maa','bhosdi','bahan','loude','lode','lavde','chutiya','🤞','🤟','☝️','mkc','bkc','mc','bc','madarchod','bahanchod','bahnchod','gandu','❓','kya','wbt','line','who',"https://",'joinchat','bullet','fuck','🤔']
+          for word in words:
+            if word.casefold() in text.casefold():
+              f = True
+          if not f:       
+           if '🖲' in text:
             i.edit(message.text.replace('🖲' , '**💘'))
-          if '📟' in z:
+           elif '📟' in text:
             i.edit(message.text.replace('📟' , '🏝'))
-          if 'Runs Scored:' in z:
+           elif 'Runs Scored:' in text:
             i.edit(message.text.replace('Runs Scored:' , '**Runs Scored:**'))
-          if 'RUNS SCORED:' in z:
+           elif 'RUNS SCORED:' in text:
             i.edit(message.text.replace('RUNS SCORED:' , '**Runs Scored:**'))
-          if '🎾' in z:
+           elif '🎾' in text:
             i.edit(message.text.replace('🎾' , '🥎'))
-          else:
+           else:
             i.edit(message.text)
         
 app.run()
