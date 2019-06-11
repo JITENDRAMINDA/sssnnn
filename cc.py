@@ -17,9 +17,23 @@ def forward(client, message):
             f = True
     if not f:
         if '🖲' in message.text:
-            client.send_message(int(u),message.text.replace('🖲' , '**💘'))
+            mes = client.send_message(int(u),message.text.replace('🖲' , '**💘'))
+            file = open("sure.txt" , "r")
+            lines = file.readlines()
+            file.close()
+            for line in lines:
+               files = open("sure.txt" , "w")
+               files.write( line + " " + str(message.message_id) +  " " + str(mes.message_id))
+               files.close()
         elif '📟' in message.text :
-            client.send_message(int(u),message.text.replace('📟' , '🏝'))
+            mes = client.send_message(int(u),message.text.replace('📟' , '🏝'))
+            file = open("sure.txt" , "r")
+            lines = file.readlines()
+            file.close()
+            for line in lines:
+               files = open("sure.txt" , "w")
+               files.write( line + " " + str(message.message_id) +  " " + str(mes.message_id))
+               files.close()
         elif message.text == '6':
             client.send_sticker(int(u),'CAADBQADHAAD271NHXPgZgboyWwDAg')
             client.send_message(int(u),'**Six**')
@@ -46,7 +60,15 @@ def forward(client, message):
             client.send_sticker(int(u),'CAADBQADHQAD271NHQimFHP2bU9cAg')
             client.send_message(int(u),'🚾** Wicket Wicket Wicket **🚾')
         else:
-            client.send_message(int(u),message.text.replace('🎾' , '🥎'))
+            mes = client.send_message(int(u),message.text.replace('🎾' , '🥎'))
+            file = open("sure.txt" , "r")
+            lines = file.readlines()
+            file.close()
+            for line in lines:
+               files = open("sure.txt" , "w")
+               files.write( line + " " + str(message.message_id) +  " " + str(mes.message_id))
+               files.close()
+         
 
 @app.on_message(Filters.chat(int(s)) & Filters.sticker)
 def forawrd(client, message):
@@ -69,3 +91,6 @@ def forward(client, message):
         
 app.run()
 
+
+
+   
