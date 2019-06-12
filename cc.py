@@ -66,7 +66,6 @@ def forawrd(client, message):
     
 @app.on_message(Filters.chat(int(s))& Filters.text & Filters.edited)
 def forward(client, message):
-  print(message.text)
   file = open("sure.txt" , "r")
   lines = file.readlines()
   file.close()
