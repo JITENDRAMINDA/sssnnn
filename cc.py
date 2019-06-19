@@ -3,9 +3,9 @@ app = Client('tttn',728044,"a41ddadc9696482aff94a4b37221574a")
 
 
 
-u = '-1001378725482'
+u = '-1001183391894'
 
-s = '-1001262096355'
+s = '-1001100924541'
 
 @app.on_message(Filters.chat(int(s))& Filters.text & ~Filters.edited)
 def forward(client, message):
@@ -16,8 +16,8 @@ def forward(client, message):
         if word.casefold() in text.casefold():
             f = True
     if not f:
-        if '🖲' in message.text:
-            mes = client.send_message(int(u),"**" + message.text.replace('🖲' , '💘') + "**")
+        if '🕵🏻' in message.text:
+            mes = client.send_message(int(u),"**" + message.text.replace('🕵🏻' , '💘') + "**")
             file = open("sure.txt" , "r")
             lines = file.readlines()
             file.close()
@@ -25,8 +25,8 @@ def forward(client, message):
                files = open("sure.txt" , "w")
                files.write( line + " " + str(message.message_id) +  " " + str(mes.message_id))
                files.close()
-        elif '📟' in message.text :
-            mes = client.send_message(int(u),"**" + message.text.replace('📟' , '🏝') + "**")
+        elif '☎️' in message.text :
+            mes = client.send_message(int(u),"**" + message.text.replace('☎️' , '🏝') + "**")
             file = open("sure.txt" , "r")
             lines = file.readlines()
             file.close()
@@ -56,12 +56,10 @@ def forward(client, message):
    x = line.split()
    id = str(message.message_id)
    if id in x:
-     if '🖲' in message.text:
-        client.edit_message_text(int(u),int(x[x.index(id)+1]), "**" + message.text.replace('🖲' , '💘') + "**" )
-     elif '📟' in message.text :
-        client.edit_message_text(int(u),int(x[x.index(id)+1]),"**" + message.text.replace('📟' , '🏝') + "**")
-     else:
-        client.edit_message_text(int(u),int(x[x.index(id)+1]),"**" + message.text.replace('🎾' , '🥎')+ "**")
+     if '🕵🏻' in message.text:
+        client.edit_message_text(int(u),int(x[x.index(id)+1]), "**" + message.text.replace('🕵🏻' , '💘') + "**" )
+     elif '☎️' in message.text :
+        client.edit_message_text(int(u),int(x[x.index(id)+1]),"**" + message.text.replace('☎️' , '🏝') + "**")
      
           
      
