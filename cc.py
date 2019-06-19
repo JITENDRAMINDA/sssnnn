@@ -1,5 +1,5 @@
 from pyrogram import Client, Filters,Emoji
-app = Client('my_account',728044,"a41ddadc9696482aff94a4b37221574a")
+app = Client('tttn',728044,"a41ddadc9696482aff94a4b37221574a")
 
 
 
@@ -34,30 +34,13 @@ def forward(client, message):
                files = open("sure.txt" , "w")
                files.write( line + " " + str(message.message_id) +  " " + str(mes.message_id))
                files.close()
-        elif message.text == 'WD' :
-            client.send_message(int(u),'🤦‍♂️ **WIDE BALL** 🤦‍♂️')
         elif message.text.casefold() == 'WKT'.casefold() :
             client.send_message(int(u),'🚾** Wicket Wicket Wicket** 🚾 ') 
-        elif 'NO BALL' in message.text:
-            client.send_message(int(u),'🔛** NO BALL **🔛' )
         elif 'DRINKS BREAK' in message.text:
             client.send_message(int(u), '🍻** DRINKS BREAK **🍻') 
-        elif 'DEAD BALL' in message.text:
-            client.send_message(int(u), '🔁** DEAD BALL **🔄') 
-        elif message.text.casefold() == 'RUKA'.casefold():
-            client.send_message(int(u), '🛑** BOWLER RUKA **🛑')
         elif message.text.casefold() == '🚾WICKET WICKET🚾'.casefold():
             client.send_message(int(u),'🚾** Wicket Wicket Wicket **🚾')
-        else:
-            mes = client.send_message(int(u), "**" + message.text.replace('🎾' , '🥎') + "**")
-            file = open("sure.txt" , "r")
-            lines = file.readlines()
-            file.close()
-            for line in lines:
-               files = open("sure.txt" , "w")
-               files.write( line + " " + str(message.message_id) +  " " + str(mes.message_id))
-               files.close()
-         
+        
 
 @app.on_message(Filters.chat(int(s)) & Filters.sticker)
 def forawrd(client, message):
