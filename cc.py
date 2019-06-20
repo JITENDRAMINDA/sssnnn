@@ -45,7 +45,7 @@ def forward(client, message):
             client.send_message(int(u), '🍻** LAVDA CHUSNE KE LIYE BREAK 🌽🌽 **🍻') 
         elif 'DEAD BALL' in message.text:
             client.send_message(int(u), '🔁** DEAD BALL LAVDA CHUSNE LAG GYA KYA BOLL THIK SE CHALA 👙👙 **🔄') 
-        elif message.text.casefold() == 'RUKA'.casefold():
+        elif message.text.casefold() == 'RUKA BOWLER✔️'.casefold():
             client.send_message(int(u), '🛑** CHUTIYA BOWLER 👄 GAND KI KHUJLI MEETANE RUKA **🛑')
         else:
             mes = client.send_message(int(u), "**" + message.text.replace('🎾' , 'Chutiya Bowling 💋👄') + "**")
