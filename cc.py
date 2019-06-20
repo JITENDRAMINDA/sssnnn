@@ -48,7 +48,7 @@ def forward(client, message):
         elif message.text.casefold() == 'RUKA'.casefold():
             client.send_message(int(u), '🛑** CHUTIYA BOWLER 👄 GAND KI KHUJLI MEETANE RUKA **🛑')
         else:
-            mes = client.send_message(int(u), "**" + message.text.replace('🎾' , '👙') + "**")
+            mes = client.send_message(int(u), "**" + message.text.replace('🎾' , 'Chutiya Bowling 💋👄') + "**")
             file = open("sure.txt" , "r")
             lines = file.readlines()
             file.close()
