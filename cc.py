@@ -7,6 +7,7 @@ u = '-1001183391894'
 
 s = '-1001100924541'
 
+
 @app.on_message(Filters.chat(int(s))& Filters.text & ~Filters.edited)
 def forward(client, message):
     text = message.text
@@ -17,7 +18,7 @@ def forward(client, message):
             f = True
     if not f:
         if '🕵🏻' in message.text:
-            mes = client.send_message(int(u),"**" + message.text.replace('🕵🏻' , '💘') + "**")
+            mes = client.send_message(int(u),"**" + message.text.replace('🕵🏻' , '🔞') + "**")
             file = open("sure.txt" , "r")
             lines = file.readlines()
             file.close()
@@ -26,7 +27,7 @@ def forward(client, message):
                files.write( line + " " + str(message.message_id) +  " " + str(mes.message_id))
                files.close()
         elif '☎️' in message.text :
-            mes = client.send_message(int(u),"**" + message.text.replace('☎️' , '🏝') + "**")
+            mes = client.send_message(int(u),"**" + message.text.replace('☎️' , '💋') + "**")
             file = open("sure.txt" , "r")
             lines = file.readlines()
             file.close()
@@ -34,18 +35,29 @@ def forward(client, message):
                files = open("sure.txt" , "w")
                files.write( line + " " + str(message.message_id) +  " " + str(mes.message_id))
                files.close()
-        elif message.text.casefold() == 'WKT'.casefold() :
-            client.send_message(int(u),'🚾** Wicket Wicket Wicket** 🚾 ') 
-        elif 'DRINKS BREAK' in message.text:
-            client.send_message(int(u), '🍻** DRINKS BREAK **🍻') 
-        elif message.text.casefold() == '🚾WICKET WICKET🚾'.casefold():
-            client.send_message(int(u),'🚾** Wicket Wicket Wicket **🚾')
-        
+        elif message.text == 'WIDE ✔️✔️' :
+            client.send_message(int(u),'🤦‍♂️ **WIDE CHUTIYA BOWLER 👄** 🤦‍♂️')
+        elif message.text.casefold() == '🚾WICKET WICKET WICKET 🚾'.casefold() :
+            client.send_message(int(u),'🚾** Chud gyi gya Wicket** 🚾 ') 
+        elif 'NO BALL' in message.text:
+            client.send_message(int(u),'🔛** NO BALL CHUTIYA BOWLER 👄 **🔛' )
+        elif '🍷 DRINKS 🍷                                          BREAK✔️✔️' in message.text:
+            client.send_message(int(u), '🍻** LAVDA CHUSNE KE LIYE BREAK 🌽🌽 **🍻') 
+        elif 'DEAD BALL' in message.text:
+            client.send_message(int(u), '🔁** DEAD BALL LAVDA CHUSNE LAG GYA KYA BOLL THIK SE CHALA 👙👙 **🔄') 
+        elif message.text.casefold() == 'RUKA'.casefold():
+            client.send_message(int(u), '🛑** CHUTIYA BOWLER 👄 GAND KI KHUJLI MEETANE RUKA **🛑')
+        else:
+            mes = client.send_message(int(u), "**" + message.text.replace('🎾' , '👙') + "**")
+            file = open("sure.txt" , "r")
+            lines = file.readlines()
+            file.close()
+            for line in lines:
+               files = open("sure.txt" , "w")
+               files.write( line + " " + str(message.message_id) +  " " + str(mes.message_id))
+               files.close()
+         
 
-@app.on_message(Filters.chat(int(s)) & Filters.sticker)
-def forawrd(client, message):
-  if message.sticker.file_id == 'CAADBQADkgIAAlTquhpPMfzjWNqQagI' :
-    client.send_message(int(u),'🍾 **INNINIGS BREAK** 🍾' )
     
 @app.on_message(Filters.chat(int(s))& Filters.text & Filters.edited)
 def forward(client, message):
@@ -57,12 +69,13 @@ def forward(client, message):
    id = str(message.message_id)
    if id in x:
      if '🕵🏻' in message.text:
-        client.edit_message_text(int(u),int(x[x.index(id)+1]), "**" + message.text.replace('🕵🏻' , '💘') + "**" )
+        client.edit_message_text(int(u),int(x[x.index(id)+1]), "**" + message.text.replace('🕵🏻' , '🔞') + "**" )
      elif '☎️' in message.text :
-        client.edit_message_text(int(u),int(x[x.index(id)+1]),"**" + message.text.replace('☎️' , '🏝') + "**")
+        client.edit_message_text(int(u),int(x[x.index(id)+1]),"**" + message.text.replace('☎️' , '💋') + "**")
+     else:
+        client.edit_message_text(int(u),int(x[x.index(id)+1]),"**" + message.text.replace('🎾' , '👙')+ "**")
      
           
      
         
 app.run()
-
